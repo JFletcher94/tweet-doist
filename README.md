@@ -13,7 +13,7 @@
 ###Not Yet Implemented:
 * Specify Todoist project, priority, other
 * More options from twitter
-* More!
+* More flexible rules
 
 ###Installation Instructions:
 * Install python (2.7+) and required libraries (above)
@@ -25,3 +25,6 @@
 * Run 'setup.sh'
 * Copy and paste 'Consumer Key' and 'Consumer Secret' into appropriate fields
 * Click 'Ok'
+
+###Rule Formatting:
+* threshold must be a number greater than 0, no more than 100
