@@ -27,4 +27,4 @@
 * Click 'Ok'
 
 ###Rule Formatting:
-* threshold must be a number greater than 0, no more than 100
+* Threshold must be a number greater than 0, no more than 100
