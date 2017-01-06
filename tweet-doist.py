@@ -109,7 +109,8 @@ class main_GUI:
     def check_login(self):
         """
         Check if user has logged into both twitter and todoist.
-        If the usser has, launch rule-curation window."""
+        If the usser has, launch rule-curation window.
+        """
         if self.tw_logged_in and self.td_logged_in:
             self.login_top_level.withdraw()
             self.trigger_top_level.deiconify()
