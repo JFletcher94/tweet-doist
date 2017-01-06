@@ -139,8 +139,10 @@ def write_json(fname, slib):
     f.close()
 
 def u_to_ascii(data):
-    """Convert uncode to (ascii) str.
-       Use recursion to convert nested lists and dicts."""
+    """
+    Convert uncode to (ascii) str.
+    Use recursion to convert nested lists and dicts.
+    """
     if isinstance(data, unicode):
         return data.encode('ascii', 'ignore')
     if isinstance(data, list):
