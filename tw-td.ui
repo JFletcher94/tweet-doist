@@ -1,0 +1,463 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface>
+  <object class="tk.Toplevel" id="login_top_level">
+    <property name="borderwidth">4</property>
+    <property name="height">200</property>
+    <property name="title" translatable="yes">Login</property>
+    <property name="width">200</property>
+    <child>
+      <object class="tk.Frame" id="tw_login_frame">
+        <property name="height">200</property>
+        <property name="width">200</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+        </layout>
+        <child>
+          <object class="tk.Label" id="tw_login_label">
+            <property name="text" translatable="yes">Twitter Login</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+              <property name="sticky">n</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Button" id="tw_url_button">
+            <property name="command">twitter_login</property>
+            <property name="text" translatable="yes">Login</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">1</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Button" id="tw_logout_button">
+            <property name="command">tw_logout</property>
+            <property name="text" translatable="yes">Logout</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">8</property>
+            </layout>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Frame" id="login_buffer_frame">
+        <property name="height">100</property>
+        <property name="width">40</property>
+        <layout>
+          <property name="column">1</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Frame" id="td_login_frame">
+        <property name="height">200</property>
+        <property name="width">200</property>
+        <layout>
+          <property name="column">2</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+        </layout>
+        <child>
+          <object class="tk.Label" id="td_login_label">
+            <property name="text" translatable="yes">Todoist Login</property>
+            <layout>
+              <property name="column">1</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+              <property name="sticky">n</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Label" id="td_email_label">
+            <property name="text" translatable="yes">email:</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">1</property>
+              <property name="sticky">e</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Entry" id="td_email_entry">
+            <layout>
+              <property name="column">1</property>
+              <property name="propagate">True</property>
+              <property name="row">1</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Label" id="td_password_label">
+            <property name="text" translatable="yes">password:</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">2</property>
+              <property name="sticky">e</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Entry" id="td_password_entry">
+            <property name="show">*</property>
+            <layout>
+              <property name="column">1</property>
+              <property name="propagate">True</property>
+              <property name="row">2</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Frame" id="td_login_buttons_frame">
+            <property name="height">200</property>
+            <property name="width">200</property>
+            <layout>
+              <property name="column">1</property>
+              <property name="propagate">True</property>
+              <property name="row">3</property>
+            </layout>
+            <child>
+              <object class="tk.Button" id="td_login_button">
+                <property name="command">td_login</property>
+                <property name="repeatinterval">0</property>
+                <property name="text" translatable="yes">Login</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                </layout>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="tk.Toplevel" id="trigger_top_level">
+    <property name="borderwidth">4</property>
+    <property name="height">200</property>
+    <property name="title" translatable="yes">Configure Rules</property>
+    <property name="width">200</property>
+    <child>
+      <object class="tk.Frame" id="trigger_tw_frame">
+        <property name="height">200</property>
+        <property name="width">200</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+          <property name="sticky">n</property>
+        </layout>
+        <child>
+          <object class="tk.Label" id="trigger_tw_label">
+            <property name="text" translatable="yes">Twitter Trigger</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+              <property name="sticky">n</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Frame" id="trigger_tw_buffer">
+            <property name="height">20</property>
+            <property name="width">10</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">1</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Frame" id="trigger_tw_options_frame">
+            <property name="height">200</property>
+            <property name="width">200</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">2</property>
+            </layout>
+            <child>
+              <object class="tk.Radiobutton" id="trigger_tw_mentions_button">
+                <property name="text" translatable="yes">@ mentions</property>
+                <property name="value">am</property>
+                <property name="variable">string:trigger_tw_option</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">1</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="tk.Radiobutton" id="trigger_tw_rt_button">
+                <property name="text" translatable="yes">retweets</property>
+                <property name="value">rt</property>
+                <property name="variable">string:trigger_tw_option</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="tk.Frame" id="trigger_tw_options_number_frame">
+                <property name="height">200</property>
+                <property name="width">200</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">2</property>
+                </layout>
+                <child>
+                  <object class="tk.Label" id="trigger_tw_options_number_label">
+                    <property name="text" translatable="yes">Threshold:</property>
+                    <layout>
+                      <property name="column">0</property>
+                      <property name="propagate">True</property>
+                      <property name="row">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Entry" id="trigger_tw_options_number_entry">
+                    <property name="width">6</property>
+                    <layout>
+                      <property name="column">1</property>
+                      <property name="propagate">True</property>
+                      <property name="row">0</property>
+                    </layout>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Frame" id="trigger_buffer_left_frame">
+        <property name="height">100</property>
+        <property name="width">30</property>
+        <layout>
+          <property name="column">1</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+          <property name="sticky">n</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Frame" id="trigger_td_frame">
+        <property name="height">200</property>
+        <property name="width">200</property>
+        <layout>
+          <property name="column">2</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+          <property name="sticky">n</property>
+        </layout>
+        <child>
+          <object class="tk.Label" id="trigger_td_label">
+            <property name="text" translatable="yes">Todoist Action</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+              <property name="sticky">n</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Frame" id="trigger_tw_buffer_1">
+            <property name="height">20</property>
+            <property name="width">10</property>
+            <layout>
+              <property name="column">1</property>
+              <property name="propagate">True</property>
+              <property name="row">1</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Radiobutton" id="trigger_td_add_button">
+            <property name="text" translatable="yes">add task</property>
+            <property name="value">add</property>
+            <property name="variable">string:trigger_td_option</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">2</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Frame" id="trigger_td_text_frame">
+            <property name="height">200</property>
+            <property name="width">200</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">4</property>
+              <property name="sticky">e</property>
+            </layout>
+            <child>
+              <object class="tk.Label" id="trigger_td_text_label">
+                <property name="text" translatable="yes">Task text:</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="tk.Entry" id="trigger_td_text_entry">
+                <layout>
+                  <property name="column">2</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                  <property name="sticky">e</property>
+                </layout>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Frame" id="trigger_td_datetime_frame">
+            <property name="height">200</property>
+            <property name="width">200</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">5</property>
+              <property name="sticky">e</property>
+            </layout>
+            <child>
+              <object class="tk.Label" id="trigger_td_datetime_label">
+                <property name="text" translatable="yes">Date string:</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="tk.Entry" id="trigger_td_datetime_entry">
+                <layout>
+                  <property name="column">1</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                  <property name="sticky">e</property>
+                </layout>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Frame" id="trigger_buffer_right_frame">
+        <property name="height">100</property>
+        <property name="highlightthickness">3</property>
+        <property name="width">40</property>
+        <layout>
+          <property name="column">3</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+        </layout>
+        <child>
+          <object class="tk.Button" id="trigger_create_button">
+            <property name="command">create_rule</property>
+            <property name="text" translatable="yes">Create</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+            </layout>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Frame" id="trigger_list_frame">
+        <property name="height">200</property>
+        <property name="width">200</property>
+        <layout>
+          <property name="column">4</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+          <property name="sticky">n</property>
+        </layout>
+        <child>
+          <object class="tk.Label" id="trigger_list_label">
+            <property name="text" translatable="yes">Current Rules</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+              <property name="sticky">n</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Listbox" id="trigger_list_listbox">
+            <property name="height">8</property>
+            <property name="width">24</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">1</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Button" id="trigger_list_button">
+            <property name="command">remove_rule</property>
+            <property name="text" translatable="yes">Delete Selected</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">2</property>
+              <property name="sticky">e</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Button" id="commit_button">
+            <property name="command">commit</property>
+            <property name="text" translatable="yes">Commit</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">3</property>
+              <property name="sticky">e</property>
+            </layout>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
